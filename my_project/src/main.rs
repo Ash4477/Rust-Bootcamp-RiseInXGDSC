@@ -1,3 +1,5 @@
+use std::collections::HashMap;
+
 fn main() {
 
     // Variables
@@ -120,7 +122,7 @@ fn main() {
         1 => "Num 1",
         2 => "Num 1",
         3 => "Num 1",
-    }
+    };
 
     // Ownership Concept
 
@@ -159,4 +161,77 @@ fn main() {
     // Cloning -> copying actual value instead of a reference
     let original_string = String::from("Yo");
     let cloned_string = original_string.clone();
+
+    // Collections in Rust
+
+    // 1) Vectors
+
+    // Using the vec! macro
+    let mut numbers = vec![1, 2, 3, 4];
+
+    // Using the Vec::new() function
+    let mut names: Vec<String> = Vec::new();
+
+    let mut names: Vec = Vec::new();
+    names.push(String::from("Alice"));
+    names.push(String::from("Bob"));
+
+    let names = vec![String::from("Alice"), String::from("Bob")];
+    let first_name = &names[0]; // Accessing the first element using indexing
+    println!("The first name is: {}", first_name);
+
+    let numbers = vec![1, 2, 3, 4];
+    for number in &numbers {
+        println!("Number: {}", number);
+    }
+
+    let numbers = vec![1, 2, 3, 4, 5];
+    let slice = &numbers[1..4];
+
+    // 2) Strings
+
+    let mut hello = String::from("Hello, ");
+    hello.push_str("world!");
+    hello.push('!');
+    println!("{}", hello); // "Hello, world!!"
+
+    let example = String::from("hello");
+    let slice = &example[0..2];
+    println!("{}", slice); // "he"
+
+
+    let example = String::from("hello");
+
+    // Iterate over characters
+    for c in example.chars() {
+        println!("{}", c);
+    }
+
+    let text = "こんにちは";
+    for c in text.chars() {
+        println!("{}", c);
+    }
+
+    // Iterate over bytes
+    for b in example.bytes() {
+        println!("{}", b);
+    }
+
+    let mut scores = HashMap::new();
+
+    scores.insert(String::from("Alice"), 10);
+    scores.insert(String::from("Bob"), 20);
+
+    let alice_score = scores.get(&String::from("Alice"));
+    println!("Alice's score: {:?}", alice_score);
+
+    scores.insert(String::from("Alice"), 30);
+    println!("Updated scores: {:?}", scores);
+
+    scores.remove(&String::from("Alice"));
+    println!("Scores after removing Alice: {:?}", scores);
+
+    for (key, value) in &scores {
+        println!("{}: {}", key, value);
+    }
 }
