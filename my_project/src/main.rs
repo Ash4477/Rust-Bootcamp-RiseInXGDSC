@@ -127,4 +127,31 @@ fn main() {
     let s1 = String::from("Hello"); // s1 is a stack pointing to heap where hello is stored
     let s2 = s1;    // instead of copying s1 to s2, the ownership of s1's value is moved to s2
                     // and s1 is discarded. This is ownership concept. We cant use s1 values anymore.
+
+    // Borrowing and References
+    // There are two type of references in rust: immutable and mutable
+    
+    /*
+    1) immutable (allow you to read but not modify)
+        -> One important thing to note about immutable references is 
+        that you can have multiple immutable references to the same value at the same time. 
+        This is known as "aliasing", and it allows you to read the value from different parts 
+        of your code without causing any issues.
+
+        IMP -> However, you can't have a mutable reference and an immutable reference to the 
+        same value at the same time, as this would violate Rust's borrowing rules.
+    */
+
+    let my_string = String::from("Hey");
+    let my_ref = &my_string; // we use & to reference or borrow
+
+    fn print_string(s: &String){ // referencing parameter
+        println!("{}",s);
+    }
+
+    /*
+    2) mutable (allow to read and modify) and
+    */
+
+    let r3 = &mut my_string; // mutable reference
 }
