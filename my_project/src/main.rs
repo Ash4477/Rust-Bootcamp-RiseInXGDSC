@@ -121,4 +121,10 @@ fn main() {
         2 => "Num 1",
         3 => "Num 1",
     }
+
+    // Ownership Concept
+
+    let s1 = String::from("Hello"); // s1 is a stack pointing to heap where hello is stored
+    let s2 = s1;    // instead of copying s1 to s2, the ownership of s1's value is moved to s2
+                    // and s1 is discarded. This is ownership concept. We cant use s1 values anymore.
 }
