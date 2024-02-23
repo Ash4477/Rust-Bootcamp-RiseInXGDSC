@@ -70,4 +70,55 @@ fn main() {
     let person = (("Alice", "Smith"), 30);
     println!("The person's name is {} {} and their age is {}.", person.0.0, person.0.1, person.1);
 
+    // Control Flow
+
+    // while loop
+    let mut i = 0;
+    while i <= 5{
+        println!("Counter value is {}.",i);
+        i += 1;
+    }
+
+    // for loop
+    for i in 1..5{
+        println!("Num is {}",i);
+    }
+
+    for i in 1..=5{
+        println!("Num is {}",i);
+    }
+
+    // loop
+    i = 0;
+    loop {
+        println!("Counter Value is {}", i);
+        i += 1;
+
+        if (i > 6){
+            break;
+        }
+    }
+
+    // match
+
+    let num = 5;
+
+    match num {
+        1 => {
+            println!("This is first match arm!");
+            println!("Woah");
+        }
+
+        3 => println!("Oh"),
+        
+        5 => println!("DAMN"),
+
+        _ => println!("Number is something else"),
+    }
+
+    let result = match num {
+        1 => "Num 1",
+        2 => "Num 1",
+        3 => "Num 1",
+    }
 }
