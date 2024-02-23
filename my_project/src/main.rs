@@ -154,4 +154,9 @@ fn main() {
     */
 
     let r3 = &mut my_string; // mutable reference
+
+
+    // Cloning -> copying actual value instead of a reference
+    let original_string = String::from("Yo");
+    let cloned_string = original_string.clone();
 }
