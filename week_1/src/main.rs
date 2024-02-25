@@ -1,3 +1,9 @@
+/*
+    To run a specific part of code, comment rest to it to run properly!
+*/
+
+
+
 use std::collections::HashMap;
 
 fn main() {
