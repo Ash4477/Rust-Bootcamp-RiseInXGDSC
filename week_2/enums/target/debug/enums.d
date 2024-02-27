@@ -1,0 +1,1 @@
+D:\Study\ Shit\Programming\ Shit\Rust-Bootcamp\Rust-Bootcamp-RiseInXGDSC\week_2\enums\target\debug\enums.exe: D:\Study\ Shit\Programming\ Shit\Rust-Bootcamp\Rust-Bootcamp-RiseInXGDSC\week_2\enums\src\main.rs
