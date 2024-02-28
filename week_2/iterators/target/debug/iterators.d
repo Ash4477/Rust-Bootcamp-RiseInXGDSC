@@ -1,0 +1,1 @@
+D:\Study\ Shit\Programming\ Shit\Rust-Bootcamp\Rust-Bootcamp-RiseInXGDSC\week_2\iterators\target\debug\iterators.exe: D:\Study\ Shit\Programming\ Shit\Rust-Bootcamp\Rust-Bootcamp-RiseInXGDSC\week_2\iterators\src\main.rs
