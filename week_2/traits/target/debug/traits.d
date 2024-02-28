@@ -1,0 +1,1 @@
+D:\Study\ Shit\Programming\ Shit\Rust-Bootcamp\Rust-Bootcamp-RiseInXGDSC\week_2\traits\target\debug\traits.exe: D:\Study\ Shit\Programming\ Shit\Rust-Bootcamp\Rust-Bootcamp-RiseInXGDSC\week_2\traits\src\main.rs
