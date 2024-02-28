@@ -1,7 +1,9 @@
-// Closures are functions without names that can capture the enclosing environment. 
-// They are also known as anonymous functions or lambdas.
+use std::fs;
 
 fn main() {
+    // Closures are functions without names that can capture the enclosing environment. 
+    // They are also known as anonymous functions or lambdas.
+    
     // define a closure to print a text
     let print_text = || println!("Defining Closure");
 
@@ -35,5 +37,17 @@ fn main() {
     but you can't change anything.
        
     */
+
+    // Error Handling
+    let my_content = getFileContent("my_file.txt");
+    match my_content {
+        Ok(item) => println!(":> {}", item),
+        Err(_) => println!(":<"),
+    }
+}
+
+fn getFileContent(file_name: &str) -> Result<String, std::io::Error> {
+    let content = fs::read_to_string(file_name)?;
+    Ok(content)
 }
 
